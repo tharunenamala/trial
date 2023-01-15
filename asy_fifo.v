@@ -55,7 +55,7 @@ end
 //--Combinational logic--//
 //--Binary pointer--//
 assign wr_full  = ((wr_pointer[POINTER-1 : 0] == rd_pointer_sync[POINTER-1 : 0]) && 
-				(wr_pointer[POINTER] != rd_pointer_sync[POINTER] ));
+				(wr_pointer[POINTER-1] != rd_pointer_sync[POINTER-1] ));
 //-- Gray pointer--//
 //assign wr_full  = ((wr_pointer[POINTER-2 : 0] == rd_pointer_sync[POINTER-2 : 0]) && 
 //				(wr_pointer[POINTER-1] != rd_pointer_sync[POINTER-1]) &&
